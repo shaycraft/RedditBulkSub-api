@@ -19,6 +19,7 @@ namespace RedditBulkSub_api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseUrls("http://localhost:5000", "http://samhaycraft.net:5000")
+            .UseStartup<Startup>();
     }
 }
